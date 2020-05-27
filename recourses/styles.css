@@ -1,0 +1,206 @@
+* {
+    /*border: 1px red solid;*/
+    box-sizing: border-box;
+    margin: 0;
+    font-family: 'Press Start 2P', sans-serif;
+    font-weight: 200;
+    font-size: 25px;
+    color: #1c343e;
+}
+
+body {
+    margin-top: 1rem;
+    background-color: white;
+    /*background-image: url("/recourses/images/l1Tetromino.png");*/
+}
+
+.tetromino {
+    background-color: white;
+    /*background-image: url("/recourses/images/l1Tetromino.png");*/
+}
+
+/*#l1Tetromino .taken div {
+    background-image: url("/recourses/images/l1Tetromino.png");
+}
+
+#l2Tetromino .taken div {
+    background-image: url("/recourses/images/l1Tetromino.png");
+}
+
+#z1Tetromino .taken div {
+    background-image: url("/recourses/images/l1Tetromino.png");
+}
+
+#z2Tetromino .taken div {
+    background-image: url("/recourses/images/l1Tetromino.png");
+}
+
+#tTetromino .taken div {
+    background-image: url("/recourses/images/l1Tetromino.png");
+}
+
+#oTetromino .taken div {
+    background-image: url("/recourses/images/l1Tetromino.png");
+}
+
+#iTetromino .taken div {
+    background-image: url("/recourses/images/l1Tetromino.png");
+}*/
+
+
+#start-button {
+    font-size: 1rem;
+    color: #1c343e;
+    background-color: #ffffff;
+    border: none;
+    margin-top: 1rem;
+}
+
+
+.container {
+    display: flex;
+    background-color: #1c343e;
+    height: fit-content;
+    width: fit-content;
+    padding: 0.5rem;
+}
+
+
+.left {
+    display: flex;
+}
+
+.left .border-left {
+    background-image: url("https://clairevanblerck.com/resources/images/tetris/border.png");
+    height: 507px;
+    width: 30px;
+}
+
+.left .border-right {
+    background-image: url("https://clairevanblerck.com/resources/images/tetris/border.png");
+    height: 507px;
+    width: 30px;
+}
+
+.grid {
+    width: 307px;
+    height: 507px;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #edfcdf;
+    padding: 0.1rem;
+    /*border: 9px double #5b886e;*/
+}
+
+.grid div {
+    width: 30px;
+    height: 25px;
+}
+
+
+.right {
+    width: 10rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.stats {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 15rem;
+    margin: 0 auto;
+}
+
+.stat-item {
+    display: block;
+    background-color: #edfcdf;
+    width: 7rem;
+    height: 3.5rem;
+    border: 9px double #5b886e;
+    margin: 0 auto;
+}
+
+.stat-item h3 {
+    text-transform: uppercase;
+    letter-spacing: 0.25rem;
+    padding: 0.1rem;
+
+}
+
+.score-board {
+    height: 6rem;
+    width: 10.5rem;
+}
+
+.score-board .stat-item {
+    position: relative;
+    bottom: 1rem;
+    width: 7rem;
+    height: 2rem;
+}
+
+.stripes {
+    height: 2rem;
+    width: 10.5rem;
+    
+}
+
+
+#blue {
+    background-color: #1c343e;
+    height: 2rem;
+    width: 10.3rem;
+    border-bottom: 9px solid ##edfcdf;
+}
+
+#green {
+    background-color: #5b886e;
+    height: 1.5rem;
+    width: 10.3rem;
+    border-bottom: 9px double #edfcdf;
+}
+
+#white {
+    background-color: #edfcdf;
+    height: 2rem;
+    width: 10.3rem;
+    border-bottom: 9px double #5b886e;
+}
+
+#score {
+    display: block;
+    color: #1c343e;
+    padding: 0.1rem;
+    position: relative;
+    top: 1rem;
+    float: right;
+}
+
+.level h3, .lines h3 {
+}
+
+.lines {
+}
+
+.next {
+    margin-top: 2rem;
+}
+
+.mini-grid {
+    display: flex;
+    flex-wrap: wrap;
+    width: 133px;
+    height: 133px;
+    background-color: #edfcdf;
+    border: 14px double #5b886e;
+    padding: 0.1rem;
+}
+
+.mini-grid div {
+    width: 25px;
+    height: 25px;
+}
+

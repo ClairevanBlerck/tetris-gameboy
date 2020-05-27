@@ -8,14 +8,15 @@ document.addEventListener('DOMContentLoaded', () => {
     let timerId
     let score = 0
     const colors  = [
-        'violet',
-        'white',
-        'lime',
-        'yellow',
-        'orange',
-        'blue',
-        'red'
+        "url('https://clairevanblerck.com/resources/images/tetris/l1Tetromino.png')",
+        "url('https://clairevanblerck.com/resources/images/tetris/l2Tetromino.png')",
+        "url('https://clairevanblerck.com/resources/images/tetris/z2tetromino.png')",
+        "url('https://clairevanblerck.com/resources/images/tetris/z2tetromino.png')",
+        "url('https://clairevanblerck.com/resources/images/tetris/tTetromino.png')",
+        "url('https://clairevanblerck.com/resources/images/tetris/oTetromino.png')",
+        "url('https://clairevanblerck.com/resources/images/tetris/iTetromino.png')"
     ]
+
 
     //The Tetrominoes
     const l1Tetromino = [
@@ -70,7 +71,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const theTetrominoes = [l1Tetromino, l2Tetromino, z1Tetromino, z2Tetromino, tTetromino, oTetromino, iTetromino]
     let currentPosition = 4
     let currentRotation = 0
-
+    
     //randomly select a Tetromino and it's first rotation
     let random = Math.floor(Math.random()*theTetrominoes.length)
     console.log(random)
@@ -80,15 +81,17 @@ document.addEventListener('DOMContentLoaded', () => {
     function draw() {
         current.forEach(index =>{
             squares[currentPosition + index].classList.add('tetromino')
-            squares[currentPosition + index].style.backgroundColor = colors[random]
+            squares[currentPosition + index].style.backgroundImage = colors[random];
         })
     }
+
+
 
     //undraw the Tetromino
     function undraw() {
         current.forEach(index => {
             squares[currentPosition + index].classList.remove('tetromino')
-            squares[currentPosition + index].style.backgroundColor = ''
+            squares[currentPosition + index].style.backgroundImage = ''
         })
     }
 
@@ -187,11 +190,11 @@ document.addEventListener('DOMContentLoaded', () => {
         //remove any trace of a tetromino from the entire grid
         displaySquares.forEach(square => {
             square.classList.remove('tetromino')
-            square.style.backgroundColor = ''
+            square.style.backgroundImage = ''
         })
         upNextTetrominoes[nextRandom].forEach( index => {
             displaySquares[displayIndex + index].classList.add('tetromino')
-            displaySquares[displayIndex + index].style.backgroundColor = colors[nextRandom]
+            displaySquares[displayIndex + index].style.backgroundImage = colors[nextRandom]
         })
     }
 
@@ -218,7 +221,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 row.forEach(index => {
                     squares[index].classList.remove('taken')
                     squares[index].classList.remove('tetromino')
-                    squares[index].style.backgroundColor = ''
+                    squares[index].style.backgroundImage = ''
                 })
                 const squaresRemoved = squares.splice(i, width)
                 squares = squaresRemoved.concat(squares)

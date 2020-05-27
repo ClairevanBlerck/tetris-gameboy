@@ -11,40 +11,38 @@
 body {
     margin-top: 1rem;
     background-color: white;
-    /*background-image: url("/recourses/images/l1Tetromino.png");*/
 }
 
 .tetromino {
     background-color: white;
-    /*background-image: url("/recourses/images/l1Tetromino.png");*/
 }
 
 /*#l1Tetromino .taken div {
-    background-image: url("/recourses/images/l1Tetromino.png");
+    background-image: url("/resources/images/l1Tetromino.png");
 }
 
 #l2Tetromino .taken div {
-    background-image: url("/recourses/images/l1Tetromino.png");
+    background-image: url("/resources/images/l1Tetromino.png");
 }
 
 #z1Tetromino .taken div {
-    background-image: url("/recourses/images/l1Tetromino.png");
+    background-image: url("/resources/images/l1Tetromino.png");
 }
 
 #z2Tetromino .taken div {
-    background-image: url("/recourses/images/l1Tetromino.png");
+    background-image: url("/resources/images/l1Tetromino.png");
 }
 
 #tTetromino .taken div {
-    background-image: url("/recourses/images/l1Tetromino.png");
+    background-image: url("/resources/images/l1Tetromino.png");
 }
 
 #oTetromino .taken div {
-    background-image: url("/recourses/images/l1Tetromino.png");
+    background-image: url("/resources/images/l1Tetromino.png");
 }
 
 #iTetromino .taken div {
-    background-image: url("/recourses/images/l1Tetromino.png");
+    background-image: url("/resources/images/l1Tetromino.png");
 }*/
 
 
@@ -62,34 +60,30 @@ body {
     background-color: #1c343e;
     height: fit-content;
     width: fit-content;
-    padding: 0.5rem;
+    padding: 1rem;
 }
 
 
+/* Game play section */
 .left {
     display: flex;
 }
 
-.left .border-left {
-    background-image: url("https://clairevanblerck.com/resources/images/tetris/border.png");
+.left .border {
+    background-image: url("https://clairevanblerck.com/resources/images/tetris/gridborder.png");
     height: 507px;
     width: 30px;
-}
-
-.left .border-right {
-    background-image: url("https://clairevanblerck.com/resources/images/tetris/border.png");
-    height: 507px;
-    width: 30px;
+    border-left: 2px solid #edfcdf;
+    border-right: 2px solid #edfcdf;
 }
 
 .grid {
-    width: 307px;
+    width: 302px;
     height: 507px;
     display: flex;
     flex-wrap: wrap;
     background-color: #edfcdf;
-    padding: 0.1rem;
-    /*border: 9px double #5b886e;*/
+    padding: 0.1rem 0;
 }
 
 .grid div {
@@ -97,7 +91,7 @@ body {
     height: 25px;
 }
 
-
+/* Game stats section */
 .right {
     width: 10rem;
     display: flex;
@@ -118,7 +112,7 @@ body {
     display: block;
     background-color: #edfcdf;
     width: 7rem;
-    height: 3.5rem;
+    height: 3.7rem;
     border: 9px double #5b886e;
     margin: 0 auto;
 }
@@ -126,7 +120,7 @@ body {
 .stat-item h3 {
     text-transform: uppercase;
     letter-spacing: 0.25rem;
-    padding: 0.1rem;
+    padding: 0.2rem 0.1rem;
 
 }
 
@@ -139,15 +133,16 @@ body {
     position: relative;
     bottom: 1rem;
     width: 7rem;
-    height: 2rem;
+    height: 2.2rem;
+}
+
+.score-board .stat-item h3 {
+
 }
 
 .stripes {
-    height: 2rem;
-    width: 10.5rem;
-    
+    height: 2rem;  
 }
-
 
 #blue {
     background-color: #1c343e;
@@ -175,11 +170,15 @@ body {
     color: #1c343e;
     padding: 0.1rem;
     position: relative;
-    top: 1rem;
+    top: 0.9rem;
     float: right;
 }
 
 .level h3, .lines h3 {
+}
+
+.level {
+
 }
 
 .lines {

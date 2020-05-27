@@ -8,13 +8,13 @@ document.addEventListener('DOMContentLoaded', () => {
     let timerId
     let score = 0
     const colors  = [
-        "url('https://clairevanblerck.com/resources/images/tetris/l1Tetromino.png')",
-        "url('https://clairevanblerck.com/resources/images/tetris/l2Tetromino.png')",
-        "url('https://clairevanblerck.com/resources/images/tetris/z2tetromino.png')",
-        "url('https://clairevanblerck.com/resources/images/tetris/z2tetromino.png')",
-        "url('https://clairevanblerck.com/resources/images/tetris/tTetromino.png')",
-        "url('https://clairevanblerck.com/resources/images/tetris/oTetromino.png')",
-        "url('https://clairevanblerck.com/resources/images/tetris/iTetromino.png')"
+        "url('https://clairevanblerck.com/resources/images/tetris/l1-tetromino.png')",
+        "url('https://clairevanblerck.com/resources/images/tetris/l2-tetromino.png')",
+        "url('https://clairevanblerck.com/resources/images/tetris/z-tetromino.png')",
+        "url('https://clairevanblerck.com/resources/images/tetris/z-tetromino.png')",
+        "url('https://clairevanblerck.com/resources/images/tetris/t-tetromino.png')",
+        "url('https://clairevanblerck.com/resources/images/tetris/o-tetromino.png')",
+        "url('https://clairevanblerck.com/resources/images/tetris/i-tetromino.png')"
     ]
 
 

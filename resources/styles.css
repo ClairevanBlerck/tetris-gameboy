@@ -20,6 +20,7 @@ body {
     background-color: #1c343e;
     height: fit-content;
     width: fit-content;
+    margin: 0 auto;
     padding: 1rem;
 }
 
@@ -31,15 +32,15 @@ body {
 
 .left .border {
     background-image: url("https://clairevanblerck.com/resources/images/tetris/gridborder.png");
-    height: 507px;
     width: 30px;
+    height: 608px;
     border-left: 2px solid #edfcdf;
     border-right: 2px solid #edfcdf;
 }
 
 .grid {
-    width: 302px;
-    height: 507px;
+    width: 303px;
+    height: 608px;
     display: flex;
     flex-wrap: wrap;
     background-color: #edfcdf;
@@ -48,7 +49,7 @@ body {
 
 .grid div {
     width: 30px;
-    height: 25px;
+    height: 30px;
 }
 
 .tetromino {
@@ -167,26 +168,28 @@ body {
 .mini-grid {
     display: flex;
     flex-wrap: wrap;
-    width: 133px;
-    height: 133px;
+    width: 159px;
+    height: 159px;
     background-color: #edfcdf;
     border: 14px double #5b886e;
     border-radius: 0.6rem;
     margin: 0.5rem;
-    padding: 0.1rem;
+    padding: 0.2rem;
 }
 
 .mini-grid div {
-    width: 25px;
-    height: 25px;
+    width: 30px;
+    height: 30px;
 }
 
 
 /* Buttons section */
-.buttons {
+div.buttons {
     display: flex;
-    width: fit-content;
-    height: fit-content;
+    justify-content: space-around;
+    width: 100vw;
+    height: auto;
+    margin: 0 auto;
 }
 
 /* Movement control buttons */
@@ -195,6 +198,7 @@ body {
     flex-direction: column;
     width: 11rem;
     height: fit-content;
+    margin: 1rem;
 }
 
 .square-button {
@@ -204,6 +208,10 @@ body {
     background-color: #edfcdf;
     border: 9px double #5b886e;
     border-radius: 0.5rem;
+}
+
+.square-button h3 {
+    font-size: 1rem;
 }
 
 .left-right {
@@ -232,6 +240,7 @@ body {
     flex-direction: column;
     width: 11rem;
     height: fit-content;
+    margin: 1rem;
 }
 
 .round-button {
@@ -245,23 +254,25 @@ body {
 }
 
 #b-button {
-    float: right;
+    float: left;
 }
 
 #a-button {
-    float: left;
+    float: right;
 }
 
 /* Start button */
 .start {
+    display: flex;
+    width: fit-content;
+    height: fit-content;
     margin: 0 auto;
-    width: 50vw;
 }
 
 #start-button {
     display: block;
     width: 7rem;
-    height: 4rem;
+    height: 3rem;
     background-color: #edfcdf;
     border: 9px double #5b886e;
     border-radius: 0.5rem;
@@ -272,4 +283,186 @@ body {
     text-transform: uppercase;
     margin: 0 auto;
     color: #1c343e;
+}
+
+
+
+
+/* Media queries */
+
+@media only screen and (max-width: 376px) {
+    .container {
+        width: 100vw;
+        margin: 0 auto;
+        padding: 0.3rem;
+    }
+
+    .left {
+        width: 60vw;
+    }
+
+    .left .border {
+        width: 18px;
+        height: 366px;
+        border-left: 1px solid #edfcdf;
+        border-right: 1px solid #edfcdf;
+    }
+
+    .grid {
+        width: 182px;
+        height: 366px;
+        padding: 0.1rem 0;
+    }
+    
+    .grid div {
+        width: 18px;
+        height: 18px;
+    }
+
+    .right {
+        width: 40vw;
+    }
+
+    .stats-section {
+        height: 8rem;
+        justify-content: space-between;
+    }
+    
+    .stats-item {
+        width: 4.5rem;
+        height: 2.2rem;
+        border: 5px double #5b886e;
+        border-radius: 0.3rem;
+        margin-top: 0.1rem;
+    }
+    
+    .stats-item h3 {
+        font-size: 0.7rem;
+        letter-spacing: 0.1rem;
+        padding: 0.1rem 0.05rem;
+    }
+    
+    
+    /* Score section */
+    .score-board {
+        width: 40vw;
+        height: fit-content;
+    }
+    
+    .stripes {
+        height: 2.5rem;  
+    }
+    
+    #blue {
+        background-color: #1c343e;
+        height: 1.2rem;
+        width: 40vw;
+        border-bottom: 4px solid ##edfcdf;
+    }
+    
+    #green {
+        background-color: #5b886e;
+        height: 1rem;
+        width: 40vw;
+        border-bottom: 4px double #edfcdf;
+    }
+    
+    #white {
+        background-color: #edfcdf;
+        height: 1.5rem;
+        width: 40vw;
+        border-bottom: 4px double #5b886e;
+    }
+    
+    .score-board .stats-item {
+        bottom: 2rem;
+        width: 4.5rem;
+        height: 1.3rem;
+    }
+    
+    #score {
+        font-size: 0.7rem;
+        padding: 0.1rem;
+        position: relative;
+        top: 0.8rem;
+    }
+    
+    
+    /* Level and lines section */
+    #level {
+        font-size: 0.7rem;
+        padding: 0.1rem;
+        top: 0rem;
+    }
+    
+    #lines {
+        font-size: 0.7rem;
+        padding: 0.1rem;
+        top: 0rem;
+    }
+
+
+    .mini-grid {
+        width: 93px;
+        height: 93px;
+        border: 5px double #5b886e;
+        margin: 0;
+    }
+    
+    .mini-grid div {
+        width: 18px;
+        height: 18px;
+    }
+
+    /* Buttons section */
+    div.buttons {
+
+    }
+
+    /* Movement control buttons */
+    .controls {
+        margin: 0.5rem;
+    }
+
+    .square-button {
+        width: 2.2rem;
+        height: 2.2rem;
+        border: 5px double #5b886e;
+    }
+
+    .square-button h3 {
+        font-size: 0.9rem;
+    }
+
+
+    /* Rotation buttons */
+    .rotation {
+        width: 11rem;
+        margin: 0.5rem;
+        align-items: flex-end;
+    }
+
+    .rotation h3 {
+        font-size: 0.9rem;
+    }
+
+    .round-button {
+        width: 2.5rem;
+        height: 2.5rem;
+        border: 5px double #5b886e;
+        margin: 0.1rem;
+    }
+
+    /* Start button */
+    #start-button {
+        width: 4rem;
+        height: 2rem;
+        border: 5px double #5b886e;
+        border-radius: 0.5rem;
+    }
+
+    #start-button h3 {
+        font-size: 0.6rem;
+    }
+
 }

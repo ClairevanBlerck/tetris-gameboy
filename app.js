@@ -6,6 +6,12 @@ document.addEventListener('DOMContentLoaded', () => {
     let timerId;
     //controls
     const startButton = document.querySelector ('#start-button');
+    const upButton = document.querySelector ('#up-button');
+    const rightButton = document.querySelector ('#right-button');
+    const leftButton = document.querySelector ('#left-button');
+    const downButton = document.querySelector ('#down-button');
+    const aButton = document.querySelector ('#a-button');
+    const bButton = document.querySelector ('#b-button');
     let score = 0;
     const scoreDisplay = document.querySelector('#score');
     let level = 0;
@@ -106,18 +112,42 @@ document.addEventListener('DOMContentLoaded', () => {
 
     //assign functions on keyCodes
     function control(e) {
-        if(e.keyCode === 37) {
+        if(e.keyCode === 65) {
             moveLeft()
-        } else if (e.keyCode === 38) {
-            rotate()
         } else if (e.keyCode === 39) {
+            rotate()
+        } else if (e.keyCode === 68) {
             moveRight()
-        } else if (e.keyCode == 40) {
+        } else if (e.keyCode == 83) {
             moveDown()
         }
     }
-    document.addEventListener('keyup', control)
 
+    //add functionality to the up button
+    aButton.addEventListener('click', () => {
+        rotate();
+        }
+    )
+
+    //add functionality to the left button
+    leftButton.addEventListener('click', () => {
+        moveLeft();
+        }
+    )
+
+    //add functionality to the right button
+    rightButton.addEventListener('click', () => {
+        moveRight();
+        }
+    )
+    
+    //add functionality to the down button
+    downButton.addEventListener('click', () => {
+        moveDown();
+        }
+    )
+
+    
     //movedown function
     function moveDown() {
         undraw()
@@ -206,7 +236,7 @@ document.addEventListener('DOMContentLoaded', () => {
         })
     }
 
-    //add functionality to the button
+    //add functionality to the start button
     startButton.addEventListener('click', () => {
         if (timerId) {
             clearInterval(timerId)

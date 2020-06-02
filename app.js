@@ -1,12 +1,18 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const grid = document.querySelector('.grid')
-    let squares = Array.from(document.querySelectorAll('.grid div'))
-    const scoreDisplay = document.querySelector('#score')
-    const startButton = document.querySelector ('#start-button')
-    const width = 10
-    let nextRandom = 0
-    let timerId
-    let score = 0
+    const grid = document.querySelector('.grid');
+    const width = 10;
+    let squares = Array.from(document.querySelectorAll('.grid div'));
+    let nextRandom = 0;
+    let timerId;
+    //controls
+    const startButton = document.querySelector ('#start-button');
+    let score = 0;
+    const scoreDisplay = document.querySelector('#score');
+    let level = 0;
+    const levelDisplay = document.querySelector('#level');
+    let lines = 0;
+    const linesDisplay = document.querySelector('#lines');
+    //tetromino display colours/images
     const colors  = [
         "url('https://clairevanblerck.com/resources/images/tetris/l1-tetromino.png')",
         "url('https://clairevanblerck.com/resources/images/tetris/l2-tetromino.png')",
@@ -15,7 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "url('https://clairevanblerck.com/resources/images/tetris/t-tetromino.png')",
         "url('https://clairevanblerck.com/resources/images/tetris/o-tetromino.png')",
         "url('https://clairevanblerck.com/resources/images/tetris/i-tetromino.png')"
-    ]
+    ];
 
 
     //The Tetrominoes
@@ -132,6 +138,8 @@ document.addEventListener('DOMContentLoaded', () => {
             draw()
             displayShape()
             addScore()
+            addLevel()
+            addLines()
             gameOver()
         }
     }
@@ -218,6 +226,8 @@ document.addEventListener('DOMContentLoaded', () => {
             if(row.every(index => squares[index].classList.contains('taken'))) {
                 score +=10
                 scoreDisplay.innerHTML = score
+                lines +=1
+                linesDisplay.innerHTML = lines
                 row.forEach(index => {
                     squares[index].classList.remove('taken')
                     squares[index].classList.remove('tetromino')
@@ -228,6 +238,11 @@ document.addEventListener('DOMContentLoaded', () => {
                 squares.forEach(cell => grid.appendChild(cell))
             }
         }
+    }
+
+    function addLevel() {
+        level = Math.floor(lines / 10);
+        levelDisplay.innerHTML = level;
     }
 
     //game over

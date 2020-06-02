@@ -11,9 +11,10 @@
 </head>
 
 <body>
-
+    <!-- Main container -->
     <div class="container">
 
+        <!-- Left / grid section -->
         <div class="left">
             <div class="border"></div>
             <div class="grid">
@@ -217,6 +218,7 @@
                 <div></div>
                 <div></div>
                 <div></div>
+                <!-- Frozen wall divs -->
                 <div class="taken"></div>
                 <div class="taken"></div>
                 <div class="taken"></div>
@@ -231,22 +233,27 @@
             <div class="border"></div>
         </div>
 
-
+        <!-- Right / stats section -->
         <div class="right">
-            <div class="stats">
+
+            <div class="stats-section">
+
+                <!-- Score section -->
                 <div class="score-board">
                     <div class="stripes">
                         <div id="blue"></div>
                         <div id="green"></div>
                         <div id="white"></div>
                     </div>
-                    <div class="stat-item"><h3>Score</h3><span id="score">0</span></div>
-                    <!--<div id="score"></div>-->
+                    <div class="score stats-item"><h3>Score</h3><span id="score">0</span></div>
                 </div>
-                <div class="level stat-item"><h3>Level</h3></div>
-                <div class="lines stat-item"><h3>Lines</h3></div>
+
+                <!-- Level and lines section -->
+                <div class="level stats-item"><h3>Level</h3><span id="level">0</span></div>
+                <div class="lines stats-item"><h3>Lines</h3><span id="lines">0</span></div>
             </div>
-        
+           
+            <!-- Mini grid / Next-up section -->
             <div class="mini-grid">
                 <div></div>
                 <div></div>
@@ -266,10 +273,35 @@
                 <div></div>
             </div>
         </div>
-    
+
+    </div>
+
+    <!-- Buttons section -->
+
+    <div class="buttons">
+
+        <!-- Movement control buttons -->
+        <div class="controls">
+            <button id="up-button" class="square-button"><h3>/\</h3></button>
+            <div class="left-right">
+                <button id="left-button" class="square-button"><h3><</h3></button>
+                <button id="right-button" class="square-button"><h3>></h3></button>
+            </div>
+            <button id="down-button" class="square-button"><h3>v</h3></button>
+        </div>
+        <!-- Rotation control buttons -->
+        <div class="rotation">
+            <button id="b-button" class="round-button"><h3>B</h3></button>
+            <button id="a-button" class="round-button"><h3>A</h3></button>
+        </div>
+
     </div>
     
-    <button id="start-button">Play TETRIS !</button>
+        <!-- Start button -->
+        <div class="start">
+            <button id="start-button"><h3>Start</h3></button>
+        </div>
+    
 
 </body>
 

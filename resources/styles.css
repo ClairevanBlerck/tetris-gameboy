@@ -10,51 +10,11 @@
 
 body {
     margin-top: 1rem;
-    background-color: white;
-}
-
-.tetromino {
-    background-color: white;
-}
-
-/*#l1Tetromino .taken div {
-    background-image: url("/resources/images/l1Tetromino.png");
-}
-
-#l2Tetromino .taken div {
-    background-image: url("/resources/images/l1Tetromino.png");
-}
-
-#z1Tetromino .taken div {
-    background-image: url("/resources/images/l1Tetromino.png");
-}
-
-#z2Tetromino .taken div {
-    background-image: url("/resources/images/l1Tetromino.png");
-}
-
-#tTetromino .taken div {
-    background-image: url("/resources/images/l1Tetromino.png");
-}
-
-#oTetromino .taken div {
-    background-image: url("/resources/images/l1Tetromino.png");
-}
-
-#iTetromino .taken div {
-    background-image: url("/resources/images/l1Tetromino.png");
-}*/
-
-
-#start-button {
-    font-size: 1rem;
-    color: #1c343e;
-    background-color: #ffffff;
-    border: none;
-    margin-top: 1rem;
+    background-color: grey;
 }
 
 
+/* Main container */
 .container {
     display: flex;
     background-color: #1c343e;
@@ -64,7 +24,7 @@ body {
 }
 
 
-/* Game play section */
+/* Left / grid section */
 .left {
     display: flex;
 }
@@ -91,7 +51,13 @@ body {
     height: 25px;
 }
 
-/* Game stats section */
+.tetromino {
+    /* Tetromino colors/images stored in .js file */
+    background-color: white;
+}
+
+
+/* Right / stats section */
 .right {
     width: 10rem;
     display: flex;
@@ -100,7 +66,7 @@ body {
     align-items: flex-end;
 }
 
-.stats {
+.stats-section {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -108,36 +74,27 @@ body {
     margin: 0 auto;
 }
 
-.stat-item {
+.stats-item {
     display: block;
     background-color: #edfcdf;
     width: 7rem;
     height: 3.7rem;
     border: 9px double #5b886e;
+    border-radius: 0.5rem;
     margin: 0 auto;
 }
 
-.stat-item h3 {
+.stats-item h3 {
     text-transform: uppercase;
     letter-spacing: 0.25rem;
     padding: 0.2rem 0.1rem;
-
 }
 
+
+/* Score section */
 .score-board {
     height: 6rem;
     width: 10.5rem;
-}
-
-.score-board .stat-item {
-    position: relative;
-    bottom: 1rem;
-    width: 7rem;
-    height: 2.2rem;
-}
-
-.score-board .stat-item h3 {
-
 }
 
 .stripes {
@@ -165,6 +122,13 @@ body {
     border-bottom: 9px double #5b886e;
 }
 
+.score-board .stats-item {
+    position: relative;
+    bottom: 1rem;
+    width: 7rem;
+    height: 2.2rem;
+}
+
 #score {
     display: block;
     color: #1c343e;
@@ -174,16 +138,28 @@ body {
     float: right;
 }
 
-.level h3, .lines h3 {
+
+/* Level and lines section */
+#level {
+    display: block;
+    color: #1c343e;
+    padding: 0.1rem;
+    position: relative;
+    top: 0.2rem;
+    float: right;
 }
 
-.level {
-
+#lines {
+    display: block;
+    color: #1c343e;
+    padding: 0.1rem;
+    position: relative;
+    top: 0.2rem;
+    float: right;
 }
 
-.lines {
-}
 
+/* Mini grid / next-up section */
 .next {
     margin-top: 2rem;
 }
@@ -195,6 +171,8 @@ body {
     height: 133px;
     background-color: #edfcdf;
     border: 14px double #5b886e;
+    border-radius: 0.6rem;
+    margin: 0.5rem;
     padding: 0.1rem;
 }
 
@@ -203,3 +181,95 @@ body {
     height: 25px;
 }
 
+
+/* Buttons section */
+.buttons {
+    display: flex;
+    width: fit-content;
+    height: fit-content;
+}
+
+/* Movement control buttons */
+.controls {
+    display: flex;
+    flex-direction: column;
+    width: 11rem;
+    height: fit-content;
+}
+
+.square-button {
+    display: block;
+    width: 3.5rem;
+    height: 3.5rem;
+    background-color: #edfcdf;
+    border: 9px double #5b886e;
+    border-radius: 0.5rem;
+}
+
+.left-right {
+    display: inline-flex;
+    justify-content: space-between;
+}
+
+#up-button {
+    margin: 0 auto;
+}
+
+#right-button {  
+}
+
+#down-button {
+    margin: 0 auto;
+}
+
+#left-button {
+}
+
+
+/* Rotation buttons */
+.rotation {
+    display: flex;
+    flex-direction: column;
+    width: 11rem;
+    height: fit-content;
+}
+
+.round-button {
+    display: block;
+    width: 4rem;
+    height: 4rem;
+    background-color: #edfcdf;
+    border: 9px double #5b886e;
+    border-radius: 2rem;
+    margin: 0 auto;
+}
+
+#b-button {
+    float: right;
+}
+
+#a-button {
+    float: left;
+}
+
+/* Start button */
+.start {
+    margin: 0 auto;
+    width: 50vw;
+}
+
+#start-button {
+    display: block;
+    width: 7rem;
+    height: 4rem;
+    background-color: #edfcdf;
+    border: 9px double #5b886e;
+    border-radius: 0.5rem;
+}
+
+#start-button h3 {
+    display: block;
+    text-transform: uppercase;
+    margin: 0 auto;
+    color: #1c343e;
+}
